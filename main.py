@@ -4,7 +4,7 @@ from kairos_scraper import login_kairos, get_notes, get_planning, get_absences, 
 app = Flask(__name__)
 @app.route("/")
 def home():
-    return "Bienvenue sur mon API Kairos BEM"
+    return "<h1>Bienvenue sur mon API Kairos BEM</h1>"
 
 @app.route("/notes", methods=["POST"])
 def notes():
