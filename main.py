@@ -2,6 +2,9 @@ from flask import Flask, request, jsonify
 from kairos_scraper import login_kairos, get_notes, get_planning, get_absences, parse_notes_html, format_planning
 
 app = Flask(__name__)
+@app.route("/")
+def home():
+    return "Bienvenue sur mon API Kairos BEM"
 
 @app.route("/notes", methods=["POST"])
 def notes():
